@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Edu+NSW+ACT+Foundation&family=Montserrat:wght@400;700&family=Oswald:wght@200;500&family=Poppins:ital,wght@0,200;0,300;1,200;1,300&family=Quicksand:wght@300;400;500;700&family=Roboto:ital,wght@0,400;0,500;1,300&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@font-face {
+    font-family: 'DIN Next LT Pro';
+    src: local('DIN Next LT Pro Next Rounded LT Pro Bold'), local('DIN-Next-LT-Pro-Next-Rounded-LT-Pro-Bold'),
+        url('DINNextRoundedLTPro-Bold.woff2') format('woff2'),
+        url('DINNextRoundedLTPro-Bold.woff') format('woff'),
+        url('DINNextRoundedLTPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /*background-color: #444;*/
+    background-image: url(./bg2.jpg);
+    background-size: cover;
+}
+
+#container-grid{
+    background-image: linear-gradient(#000, #222);
+    width: 50vw;
+    min-width: 500px;
+    min-height:100vh;
+    margin: auto;
+    box-shadow: black 0 0 100px;
+    display: flex;
+   flex-flow: column;
+}
+
+#container-flex{
+    display:flex;
+    flex-flow:column;
+}
+
+h3{
+    font-family: Bebas Neue;
+    color: #eee;
+    font-size: 10rem;
+    text-shadow: rgb(238, 238, 238, 0.4) 0 0 5px;
+    align-self:center;
+    width: 252px;
+    text-align: center;
+   
+}
+
+h4{
+    font-family: poppins;
+    color: rgba(139, 0, 0, 0.5);
+    transform: translatey(12px);
+    align-self:center;
+}
+
+input{
+    outline: none;
+    border: none;
+    margin-bottom: 5rem;
+    padding: 0.7rem 1rem;
+    font-size: 3rem;
+    text-align: center;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #222;
+    box-shadow: rgb(238, 238, 238, 0.5) 0 0 15px;
+    border: 1px solid #fff;
+    font-family: poppins;
+    color: #eee;
+    align-self:center;
+    justify-self: center;
+    grid-row: 1/2;
+}
+
+#cuenta {
+    color: red;
+    font-size: 2rem;
+    font-family: Bebas Neue;
+    display: inline-block;
+    height: max-content;
+    align-self: center;
+    margin: 0 1.2rem;
+    transform: translateY(-16px);
+}
+
+#otrocontainer{
+    display: flex;
+    flex-flow: column;
+    align-self: center;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding: 0 5rem;
+    
+}
+
+#cartas-elegir{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 70%;
+    min-width: 500px;
+    margin: 0 auto 2rem;
+    gap:10px;
+    padding: 2rem 0;
+    
+}
+
+#cartas-elegir p{
+    color: white;
+    font-family: Bebas Neue;
+    background-color: #111;
+    font-size: 3rem;
+    text-align: center;
+    width: 50px;
+    margin: auto;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+#cartas-elegir p.value.undefined{
+    color: white;
+    font-family: Bebas Neue;
+    background-color: #111;
+    font-size: 3rem;
+    text-align: center;
+    width: 50px;
+    margin: auto;
+    border: 2px solid red;
+    border-radius: 10px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+h2{
+    color: #eee;
+    font-family: poppins;
+    align-self: center;
+    padding: 1rem 3rem;
+    border-bottom: 1px solid #eee;
+    margin:  3rem auto 1rem;
+    text-align: center;
+}
+
+#cartas-elegir p:hover{
+    box-shadow: #eee 0 0 15px;
+    color: #222;
+    background-color: #eee;
+}
+
+@media screen and (max-width: 1350px){
+    #otrocontainer{
+        padding: max-content;
+    }
+}
+
+@media screen and (max-width: 530px) {
+	#container-grid{
+        width: 100%;
+        min-width: unset;
+    }
+    #cartas-elegir{
+        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+        width: 100%;
+        min-width: unset;
+    }
+    #otrocontainer{
+        padding: 0;
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 440px){
+    #cartas-elegir{
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 320px){
+    #cartas-elegir{
+        gap: 2px;
+    }
+}
+
+@media screen and (max-width: 280px){
+    #cartas-elegir{
+        gap: 0;
+    }
+}
